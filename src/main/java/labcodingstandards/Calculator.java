@@ -27,7 +27,7 @@ public class Calculator {
         	input = reader.nextLine();
         	
             try {
-            	First = Integer.parseInt(input);
+            	First=Integer.parseInt(input);
                 break;
             } catch (NumberFormatException e) {
                 System.out.println("Not valid!");
@@ -46,14 +46,14 @@ public class Calculator {
             }
         }
 
-        
-        String result=Operation(First, second, operator);
+        Calculator cal=new Calculator();
+        String result=cal.Operation(First,second,operator);
 
         System.out.printf(result);
 		reader.close();
 	}
 
-	private static String Operation(double first, double second, char operator) {
+	private String Operation(double first,double second,char operator) {
 		double result = 0;
 		switch(operator)
         {
